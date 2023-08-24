@@ -7,6 +7,6 @@
  The data for this project consists of trading data from the U.S. market, spanning from April 28, 2023, to July 24, 2023. It involves a swaption matrix composed of 9 maturities and 8 tenors.
  
  ## The calibration methods used in this project.
- The authors proposed a highly effective calibration method that balances resource utilization and fitting quality. This method cleverly leverages the properties of a swaption volatility approximation technique called SMM approximation,  allowing for the separate calibration of $a$ and &sigma and thereby improving performance.
+ The authors proposed a highly effective calibration method that balances resource utilization and fitting quality. This method cleverly leverages the properties of a swaption volatility approximation technique called SMM approximation,  allowing for the separate calibration of $a$ and $/sigma$ and thereby improving performance.
 
  
