@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Aug 23 09:24:44 2023
-
-@author: Posthumous0220
-"""
-
-
 
 import pandas as pd
 import numpy as np
@@ -50,8 +42,12 @@ swaption_vol = np.round(swaption_vol, 8)
 tenor = np.array([1.0]*9 + [2.0]*9 + [3.0]*9 + [4.0]*9 + [5.0]*9 + [10.0]*9 + [15.0]*9 + [20.0]*9)
 maturity = np.array([1,2,3,4,5,6,8,10]*9)
 
+
+
+
 def P(rate,t,T):
     return np.exp(-rate * (T-t))
+
 
 
 def MargrabePrice(ZeroRate,SwapRate,vol,maturity,tenor):
