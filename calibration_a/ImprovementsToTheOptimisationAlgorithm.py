@@ -121,3 +121,43 @@ interation=100
 gama=0.01
 
 a_calibrated,cost_value=SimulatedAnnealing(initial,sigma,tenor,maturity,ZeroRate,SwaptionRatio,mean,std,interation,gama)
+
+
+#粗糙判断可能达到最优点的位置，以此作为优化算法的初值
+a_list=np.linspace(0.06,0.1,400)    
+day_list=np.arange(62)
+cost_value=np.full((62,400),1.0)
+
+for count in range(400):
+        cost_value[:,count]=cost_function(a_list[count],sigma,tenor,maturity,ZeroRate,SwaptionRatio)[:, 0]
+
+listmin_cost=np.array([])
+listmin_a=np.array([])
+for m in range(62):
+    listmin_cost=np.append(listmin_cost,np.min(cost_value[m,:]))
+    listmin_a=np.append(listmin_a,a_list[np.argmin(cost_value[m,:])])
+    
+x=listmin_a  
+
+
+
+initial=listmin_a 
+mean=0
+std=0.0001
+interation=50
+gama=0.09
+
+a_calibrated_initial=a_calibrated
+cost_value_initial=cost_value
+
+a_calibrated_new,cost_value_new=SimulatedAnnealing(initial,sigma,tenor,maturity,ZeroRate,SwaptionRatio,mean,std,interation,gama)
+cost_value_run = np.minimum(cost_value_new, cost_value_initial)
+a_calibrated_run=np.where(cost_value_new <= cost_value_initial, a_calibrated_new, a_calibrated_initial)
+
+for interation_n in range(interation):
+    a_calibrated_new,cost_value_new=SimulatedAnnealing(initial,sigma,tenor,maturity,ZeroRate,SwaptionRatio,mean,std,interation,gama)
+    cost_value_run = np.minimum(cost_value_new, cost_value_run)
+    a_calibrated_run=np.where(cost_value_run <= cost_value_new, a_calibrated_run, a_calibrated_new)
+
+
+
