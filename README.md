@@ -12,3 +12,10 @@ The authors proposed a highly effective calibration method that balances resourc
 ## Numerical Results
 The project report presents the data results obtained from both global calibration using the swaption matrix and calibration using the Co-terminals.
  
+## Dynamics and Formulas
+### Dynamics
+In the risk neutral measure,denoted by $\mathbb{Q}$, the Hull-White short-rate SDE reads
+\[dr(t)=\left(\theta(t)-a(t)r(t)\right)dt+\sigma(t)dW^{\mathbb{Q}}(t)\]
+### Closed Formulas
+### SMM Approximation
+\[V_{swap}(T_{0},T_{n})=\left[ \frac{P(0,T_{0})}{P(0,T_{0})-P(0,T_{n})}\right]^{2} V_{p}(0,T_{0},T_{n})\]
