@@ -172,6 +172,7 @@ def SimulatedAnnealing(a,initial_sigma,maturity,tenor,ZeroRate,instanforwardrate
     
     sigma_initial=initial_sigma
     sigma_run=sigma_initial
+    sigma_min=sigma_initial
     function_run_initial=costfunction(a,sigma_run,maturity,tenor,ZeroRate,instanforwardrate,swaptionrate,Market_Price)
     function_run_min=function_run_initial
     std_initial=std
