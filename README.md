@@ -11,15 +11,7 @@
 
 作者在论文中强调，这三种策略可以同时应用于不同的需求和情景。策略一只对波动率$\sigma$进行校准，具有最大的便捷性和最快的速度，但在适应市场变化方面表现较差。策略三具有最好的拟合质量与稳定性，但校准消耗的时间较长，且不易于实施。策略二可以作为策略三的替代，牺牲了一定的拟合质量，但可以很好地适应市场变化，并缩短运行时间。
 
-## Choice of Instruments
-The data for this project consists of trading data from the U.S. market, spanning from April 28, 2023, to July 24, 2023. It involves a swaption matrix composed of 9 maturities and 8 tenors.
- 
-## The calibration methods used in this project.
-The authors proposed a highly effective calibration method that balances resource utilization and fitting quality. This method cleverly leverages the properties of a swaption volatility approximation technique called SMM approximation, allowing for the separate calibration of $a$ and $\sigma$ and thereby improving performance.
-
-## Numerical Results
-The project report presents the data results obtained from both global calibration using the swaption matrix and calibration using the Co-terminals.
- 
+本项目选取2023年4月28日至2023年7月24日期间美国市场的Swaption交易数据
 
 ## Dynamics
 Hull-White模型假设短期利率在风险中性测度下服从:    
