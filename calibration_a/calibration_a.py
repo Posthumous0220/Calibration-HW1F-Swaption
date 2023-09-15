@@ -114,3 +114,5 @@ interation=100
 gama=0.01
 
 a_calibrated,cost_value=SimulatedAnnealing(initial,sigma,tenor,maturity,ZeroRate,SwaptionRatio,mean,std,interation,gama)
+print(a_calibrated)
+print(cost_value)

@@ -23,9 +23,9 @@ $$ dr(t)=\left(\theta(t)-a(t)r(t)\right)dt+\sigma(t)dW^{\mathbb{Q}}(t)$$
 
 $$\mathbb{E}\left[r(t)|\mathcal{F}_{s}\right]=\frac{E(s)}{E(t)}r(s)+\alpha(t)-\frac{E(s)}{E(t)}\alpha(s) $$
 
-
-
 $$Var\left[r(t)|\mathcal{F}_{s}\right]=V_{r}(s,t)$$
+
+
 
 其中，$E(t)$与$V_{r}(s,t)$具有如下形式：
 $$E(t)=e^{\int_{0}^{t}a(u)\,du}  $$
@@ -68,6 +68,23 @@ $$X_{i}=exp\big(A(T_{0},T_{i})-B(T_{0},T_{i})r^{*}\big)$$
 其中，$r^{*}$满足下列等式：
 $$\sum_{i=1}^{n}c_{i}exp\big(A(T_{0},T_{i})-B(T_{0},T_{i})r^{*}\big)=1$$
 
-### Closed Formulas
+
 ### SMM Approximation
+短期利率的波动率有如下近似（SMM估计）：
 $$V_{swap}(T_{0},T_{n})=\left[ \frac{P(0,T_{0})}{P(0,T_{0})-P(0,T_{n})}\right]^{2} V_{p}(0,T_{0},T_{n})$$
+注意，这个估计是粗糙的，不能代替Jamshidian分解给Swaption定价。但SMM估计有这样的优良性质：具有相同Maturity和不同Tenor之间的SMM估计的比率仅与均值回归$a$有关，这意味着我们可以在波动率$\sigma$未知的情况下校准均值回归$a$。
+$$\frac{V_{swap}(M_{i},T_{j})}{V_{swap}(M_{i},T_{k})}=\left[\frac{\Big(P(0,M_{i})-P(0,T_{k})\Big)B(M_{i},T_{j})}{\Big(P(0,M_{i})-P(0,T_{j})\Big)B(M_{i},T_{k})}\right]^{2}$$
+
+
+
+
+
+### 参考文献
+[1] [Calibration Methods of Hull-White Model](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1514192)
+[2] [Pricing Swaptions and Coupon Bond Options in Affine Term Structure Models](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=630402)
+[3] [The General Hull-White Model and Super Calibration](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1295228)
+[4] [F. Jamshidian. An Exact Bond Option Pricing Formula](https://www.jstor.org/stable/2328284)
+[5] [Interest rate modelling. Simona Svobod](https://link.springer.com/book/10.1057/9781403946027)
+[6] [Leif B. G. Andersen and Vladimir V. Piterbarg: Interest Rate Modeling](https://link.springer.com/article/10.1007/s11408-011-0157-y)
+[7] [Using Hull-White Interest Rate Trees](https://www.researchgate.net/publication/228178882_Using_Hull-White_Interest_Rate_Trees)
+[8] [Pricing Interest-Rate Derivative Securities](https://www.researchgate.net/publication/5217241_Pricing_Interest-Rate-Derivative_Securities)

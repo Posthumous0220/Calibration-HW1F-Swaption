@@ -32,7 +32,7 @@ a_calibrated = np.array(pd.read_excel('a_calibrated.xlsx', sheet_name='Sheet1').
 
 tenor = np.array([1.0]*9 + [2.0]*9 + [3.0]*9 + [4.0]*9 + [5.0]*9 + [10.0]*9 + [15.0]*9 + [20.0]*9)
 maturity = np.array([1,2,3,4,5,6,7,8,10]*8)
-weight=np.array([1.0]*2 +[5.0]*7+ [10.0]*9 + [15.0]*9 + [20.0]*9 + [20.0]*9 + [25.0]*9 + [22.0]*9 + [20.0]*9)
+weight=1/(tenor*maturity)
 
 
 Market_Price=np.array(pd.read_excel('MarketPrice.xlsx', sheet_name='Sheet1').iloc[0:62,0:72], dtype=float)

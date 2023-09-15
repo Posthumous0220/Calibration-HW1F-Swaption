@@ -5,7 +5,7 @@ class HW1FZeroBond:
         self.a=a  #初始化mean reversion，scalar
         self.sigma=sigma
         self.ZeroRate=ZeroRate[:(int(12*YearLimit)+1)]  #vector 一维数组
-        self.RateInitial=RateInitial   #scalar
+        self.RateInitial=RateInitial   #scalar 初值r(0)
         self.YearLimit=YearLimit  #int scalar,需要校准的年数
         self.Step=Step  #scalar 优化步长
 
@@ -48,7 +48,7 @@ class HW1FZeroBond:
 
 
 
-  class Algorithmboth:
+  class OptAlgorithm:
     def __init__(self,ZeroRate,RateInitial,YearLimit,Upper_a,Upper_sigma,Lower_a,Lower_sigma):
         #self.a=a  #初始化mean reversion，scalar
         #self.sigma=sigma

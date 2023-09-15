@@ -62,7 +62,7 @@ def create_swaption_helpers(data, index, term_structure, engine):
     floating_leg_daycounter = ql.Actual360()# 浮动和固定利率的天数计算方式
     for d in data:
         vol_handle = ql.QuoteHandle(ql.SimpleQuote(d.volatility))
-        helper = ql.SwaptionHelper(ql.Period(d.start, ql.Years),ql.Period(d.length, ql.Years),vol_handle,index,fixed_leg_tenor,fixed_leg_daycounter,floating_leg_daycounter,term_structure)
+        helper = ql.SwaptionHelper(ql.Period(int(d.start), ql.Years),ql.Period(int(d.length), ql.Years),vol_handle,index,fixed_leg_tenor,fixed_leg_daycounter,floating_leg_daycounter,term_structure)
         helper.setPricingEngine(engine)
         swaptions.append(helper)
     return swaptions
