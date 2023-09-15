@@ -81,10 +81,17 @@ $$\frac{V_{swap}(M_{i},T_{j})}{V_{swap}(M_{i},T_{k})}=\left[\frac{\Big(P(0,M_{i}
 
 ### 参考文献
 [1] [Calibration Methods of Hull-White Model](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1514192)
+
 [2] [Pricing Swaptions and Coupon Bond Options in Affine Term Structure Models](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=630402)
+
 [3] [The General Hull-White Model and Super Calibration](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1295228)
+
 [4] [F. Jamshidian. An Exact Bond Option Pricing Formula](https://www.jstor.org/stable/2328284)
+
 [5] [Interest rate modelling. Simona Svobod](https://link.springer.com/book/10.1057/9781403946027)
+
 [6] [Leif B. G. Andersen and Vladimir V. Piterbarg: Interest Rate Modeling](https://link.springer.com/article/10.1007/s11408-011-0157-y)
+
 [7] [Using Hull-White Interest Rate Trees](https://www.researchgate.net/publication/228178882_Using_Hull-White_Interest_Rate_Trees)
+
 [8] [Pricing Interest-Rate Derivative Securities](https://www.researchgate.net/publication/5217241_Pricing_Interest-Rate-Derivative_Securities)
