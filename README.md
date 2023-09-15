@@ -59,7 +59,7 @@ $$ d_{\pm}=\frac{ln\left(\frac{P(0,T_{F})X}{P(0,T_{P})}\right)}{\sqrt{V_{p}(0,T_
 下面将利用一系列不同期限的零息债券看跌期权给出Swaption的解析表达式。
 
 ### Jamshidian分解
-考虑一个支付方Swaption，其固定利率为 $K$，到期时间为$T_{0}$，期限为$T_{P}$，以及现金流互换时间$\{T_{i}\}_{i=1,\ldots,n}$，其中$ T_{n}= T_{P}$。可以使用Jamshidian分解将其表示为一系列零息债券看跌期权的加权之和：
+考虑一个支付方Swaption，其固定利率为 $K$，到期时间为$T_{0}$，期限为$T_{P}$，以及现金流互换时间$\{T\_{i}\}\_{i=1,\ldots,n}$ ,其中$ T_{n}= T_{P}$。可以使用Jamshidian分解将其表示为一系列零息债券看跌期权的加权之和：
 $$PSwaption(K,T_{0},T_{P})=\sum_{i=1}^{n}c_{i}ZBP(T_{0},T_{i},X_{i})  $$
 $$c_{i}=K\delta(T_{i-1},T_{i})\quad i=1,\ldots,n-1 $$
 $$c_{n}=1+K\delta(T_{n-1},T_{n})  $$
