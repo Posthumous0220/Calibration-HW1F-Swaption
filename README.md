@@ -29,7 +29,7 @@ $$Var\left[r(t)|\mathcal{F}_{s}\right]=V_{r}(s,t)$$
 
 其中，$E(t)$与$V_{r}(s,t)$具有如下形式：
 $$E(t)=e^{\int_{0}^{t}a(u)\,du}  $$
-$$V_{r}(s,t)=\frac{1}{E^{2}(t)}\int_{s}^{t}E^{2}(u)\sigma^{2}(u)\,du$$
+$$V_{r}(s,t)=\frac{1}{E^{2}(t)}\ int_{s}^{t}E^{2}(u)\sigma^{2}(u)\,du$$
 
 **零息债券**$P(t,T)$具有仿射结构：
 $$P(t,T)=exp\Big(A(t,T)-r(t)B(t,T)\Big)$$
